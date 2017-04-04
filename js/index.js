@@ -13,7 +13,7 @@ $(function(){
       }
       
       else {
-        // else we have a user and we display their info
+        
         var fullname   = json.name;
         var username   = json.login;
         var aviurl     = json.avatar_url;
@@ -46,10 +46,10 @@ $(function(){
             outhtml = outhtml + '</ul></div>'; 
           }
           $('#ghapidata').html(outhtml);
-        } // end outputPageContent()
-      } // end else statement
-    }); // end requestJSON Ajax call
-  }); // end click event handler
+        } 
+      } 
+    }); 
+  }); 
   
   function requestJSON(url, callback) {
     $.ajax({

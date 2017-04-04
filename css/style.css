@@ -17,7 +17,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 html { overflow-y: scroll; }
 body {
-  background: #fafafa url('http://i.imgur.com/l92k33u.png'); /* http://subtlepatterns.com/subtle-grey/ */
+  background: #fafafa url('http://i.imgur.com/l92k33u.png'); 
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 62.5%;
   line-height: 1;
@@ -104,7 +104,7 @@ a:hover {
 }
 
 
-/* page content styles */
+
 .smallname {
   font-size: 0.75em;
   color: #a9a9a9;
@@ -173,7 +173,6 @@ a:hover {
   font-size: 0.9em;
 }
 
-/* input field */
 #ghusername {
   display: block;
   padding: 5px 8px;
@@ -222,7 +221,7 @@ a:hover {
   box-shadow: inset 0 3px 5px rgba(0,0,0,0.25);
 }
 
-/* clearfix */
+
 .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 .clearfix { display: inline-block; }
  
