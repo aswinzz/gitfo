@@ -1,23 +1,12 @@
- var reqNo = 0;
- var accessToken = "502cb106ab113f9ed4996fb65267893c6e74ae7b";
-  function httpGetAsync(url, callback) {
-    var xmlHttp = new XMLHttpRequest();
-   xmlHttp.onreadystatechange = function() {
-     if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-       callback(xmlHttp.responseText);
-   }
-   xmlHttp.open("GET", url, true);
-   xmlHttp.send(null);
-    reqNo += 1;
-  }
+
 $(function(){
   $('#ghsubmitbtn').on('click', function(e){
     e.preventDefault();
     $('#ghapidata').html('<div id="loader"><img src="http://i.imgur.com/UqLN6nl.gif" alt="loading..."></div>');
     var username = $('#ghusername').val();
-    var requri   = 'https://api.github.com/users/'+username+'?per_page=100&access_token='+accessToken;
-    var repouri  = 'https://api.github.com/users/'+username+'/repos?per_page=100&access_token='+accessToken;
-    var stared = 'https://api.github.com/users/'+username+'/starred?per_page=100&access_token='+accessToken;
+    var requri   = 'https://api.github.com/users/'+username;
+    var repouri  = 'https://api.github.com/users/'+username+'/repos';
+    var stared = 'https://api.github.com/users/'+username+'/starred';
     requestJSON(requri, function(json) {
       if(json.message == "Not Found" || username == '') {
         $('#ghapidata').html("<h2>No User Info Found</h2>");
@@ -29,6 +18,7 @@ $(function(){
         var username   = json.login;
         var aviurl     = json.avatar_url;
         var profileurl = json.html_url;
+        var bio        = json.bio
         var location   = json.location;
         var followersnum = json.followers;
         var followingnum = json.following;
@@ -39,7 +29,7 @@ $(function(){
         
         var outhtml = '<h2>'+fullname+' <span class="smallname">(@<a href="'+profileurl+'" target="_blank">'+username+'</a>)</span></h2>';
         outhtml = outhtml + '<div class="ghcontent"><div class="avi"><a href="'+profileurl+'" target="_blank"><img src="'+aviurl+'" width="80" height="80" alt="'+username+'"></a></div>';
-        outhtml = outhtml + '<p>Followers: '+followersnum+' - Following: '+followingnum+'<br>Repos: '+reposnum+'</p></div>';
+        outhtml = outhtml + '<p>Followers: '+followersnum+' - Following: '+followingnum+'<br>Repos: '+reposnum+'<br>Bio: '+bio+'</p></div>';
         outhtml = outhtml + '<div class="repolist clearfix">'+'<div class="repolists clearfix">';
         
         var repositories;
