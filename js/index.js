@@ -48,7 +48,7 @@ $(function(){
           else {
             outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
             $.each(repositories, function(index) {
-              outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '</a></li>';
+              outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp'+repositories[index].forks_count+'</a></li>';
             });
             outhtml = outhtml + '</ul></div>'; 
           }
@@ -59,7 +59,7 @@ $(function(){
           else {
             outhtml = outhtml + '<p><strong>Starred Repo:</strong></p> <ul>';
             $.each(staredrepo, function(index) {
-              outhtml = outhtml + '<li><a href="'+staredrepo[index].html_url+'" target="_blank">'+staredrepo[index].name +'|'+staredrepo[index].forks_count+'</a></li>';
+              outhtml = outhtml + '<li><a href="'+staredrepo[index].html_url+'" target="_blank">'+staredrepo[index].name +'&nbsp|&nbsp'+staredrepo[index].forks_count+'</a></li>';
             });
             outhtml = outhtml + '</ul></div>'; 
           }
