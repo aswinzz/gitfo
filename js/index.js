@@ -1,4 +1,5 @@
-var countstar=0;
+var countstar=0,java=0,js=0,css=0,php=0,ruby=0,cpp=0,c=0,shel=0,chash=0,oc=0,r=0,viml=0,go=0,perl=0,cs=0,tex=0,swift=0,scala=0,clojure=0,rust=0,ps=0;
+var lang;
 $(function(){
   $('#ghsubmitbtn').on('click', function(e){
     e.preventDefault();
@@ -49,6 +50,73 @@ $(function(){
             $.each(repositories, function(index) {
               outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp<i class=\'fa fa-code-fork\'></i>'+repositories[index].forks_count+'&nbsp|<i class=\'fa fa-star\'></i>&nbsp'+repositories[index].stargazers_count+'&nbsp|&nbsp <i class=\'fa fa-database\'></i>&nbsp'+repositories[index].language+'</a></li>';
               countstar=countstar+repositories[index].stargazers_count;
+              lang=repositories[index].language;
+              switch(lang)
+                  {
+                case 'JavaScript' : js++;
+                                     break;
+                
+                case 'Java' : java++;
+                                     break;
+                
+                case 'CSS' : css++;
+                                     break;
+                
+                case 'PHP' : php++;
+                                     break;
+                 
+                case 'Ruby' : ruby++;
+                                     break;
+                
+                case 'C++' : cpp++;
+                                     break;
+                
+                case 'C' : c++;
+                                     break;
+                
+                case 'Shell' : shell++;
+                                     break;
+                
+                case 'c#' : chash++;
+                                     break;
+                
+                case 'Objective-C' : oc++;
+                                     break;
+                
+                case 'R' : r++;
+                                     break;
+                
+                case 'VimL' : viml++;
+                                     break;
+                
+                case 'Go' : go++;
+                                     break;
+                 
+                case 'Perl' : perl++;
+                                     break;
+                 
+                case 'CoffeeScript' : cs++;
+                                     break;
+                 
+                case 'TeX' : tex++;
+                                     break;
+                 
+                case 'Swift' : swift++;
+                                     break;
+                 
+                case 'Scala' : scala++;
+                                     break;
+                
+                case 'Clojure' : clojure++;
+                                     break;
+                 
+                case 'Rust' : rust++;
+                                     break;
+                
+                case 'PowerShell' : ps++;
+                                     break;
+                  default : break;
+                  }
             });https://api.github.com/repos/robconery/capistrano-rails-server/languages
             outhtml = outhtml + '</ul></div>'; 
           }
