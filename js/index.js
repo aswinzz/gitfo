@@ -1,4 +1,4 @@
-var countstar=0,java=0,js=0,css=0,php=0,ruby=0,cpp=0,c=0,shell=0,chash=0,oc=0,r=0,viml=0,go=0,perl=0,cs=0,tex=0,swift=0,scala=0,clojure=0,rust=0,ps=0;
+var countstar=0,java=0,js=0,css=0,php=0,ruby=0,cpp=0,c=0,shell=0,others=0,chash=0,oc=0,r=0,viml=0,go=0,perl=0,cs=0,tex=0,swift=0,scala=0,clojure=0,rust=0,ps=0;
 var lang;
 $(function(){
   $('#ghsubmitbtn').on('click', function(e){
@@ -80,27 +80,12 @@ $(function(){
                 case 'c#' : chash++;
                                      break;
                 
-                case 'Objective-C' : oc++;
-                                     break;
-                
-                case 'R' : r++;
-                                     break;
-                
-                case 'VimL' : viml++;
-                                     break;
-                
                 case 'Go' : go++;
                                      break;
                  
                 case 'Perl' : perl++;
                                      break;
-                 
-                case 'CoffeeScript' : cs++;
-                                     break;
-                 
-                case 'TeX' : tex++;
-                                     break;
-                 
+                          
                 case 'Swift' : swift++;
                                      break;
                  
@@ -115,7 +100,8 @@ $(function(){
                 
                 case 'PowerShell' : ps++;
                                      break;
-                  default : break;
+                  default : others++;
+                            break;
                   }
             });https://api.github.com/repos/robconery/capistrano-rails-server/languages
             outhtml = outhtml + '</ul></div>'; 
