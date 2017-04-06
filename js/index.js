@@ -47,12 +47,13 @@ $(function(){
           if(repositories.length == 0) { outhtml = outhtml + '<p>No repos!</p></div>'; }
           else {
             var totstars=0;
-            totstars=totstars+repositories[index].stargazers_count;
-            outhtml = outhtml + '<p><strong>Repos List:Total Stars-'+totstars+'</strong></p> <ul>';
+          
+            outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
             $.each(repositories, function(index) {
+                totstars=totstars+repositories[index].stargazers_count;
               outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp<i class=\'fa fa-code-fork\'></i>'+repositories[index].forks_count+'&nbsp|&nbsp <i class=\'fa fa-star\'></i>'+repositories[index].stargazers_count+'</a></li>';
             });
-            outhtml = outhtml + '</ul></div>'; 
+            outhtml = outhtml + '</ul><br><strong>Total Stars:'+totstars+'</strong></div>'; 
           }
           $('#ghapidata').html(outhtml);
         } 
