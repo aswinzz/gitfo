@@ -52,7 +52,7 @@ $(function(){
             });
             outhtml = outhtml + '</ul></div>'; 
           }
-          outhtml = outhtml + '<br><strong>Total Stars:'+countstar;
+          outhtml = outhtml + '<br><strong>Total Stars:</strong>'+countstar;
           $('#ghapidata').html(outhtml);
         } 
         function outputPageContents() {
