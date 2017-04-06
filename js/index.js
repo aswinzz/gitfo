@@ -45,15 +45,12 @@ $(function(){
         
         function outputPageContent() {
           if(repositories.length == 0) { outhtml = outhtml + '<p>No repos!</p></div>'; }
-          else {
-            var totstars=0;
-          
+          else {       
             outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
             $.each(repositories, function(index) {
-                totstars=totstars+repositories[index].stargazers_count;
               outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp<i class=\'fa fa-code-fork\'></i>'+repositories[index].forks_count+'&nbsp|&nbsp <i class=\'fa fa-star\'></i>'+repositories[index].stargazers_count+'</a></li>';
             });
-            outhtml = outhtml + '</ul><br><strong>Total Stars:'+totstars+'</strong></div>'; 
+            outhtml = outhtml + '</ul></div>'; 
           }
           $('#ghapidata').html(outhtml);
         } 
