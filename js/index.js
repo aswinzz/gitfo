@@ -8,6 +8,8 @@ $(function(){
     var requri   = 'https://api.github.com/users/'+username;
     var repouri  = 'https://api.github.com/users/'+username+'/repos';
     var stared = 'https://api.github.com/users/'+username+'/starred';
+    var emoji = new EmojiConvertor();
+    emoji.img_sets.apple.path = "http://cdn.mubaris.com/emojis/";
     requestJSON(requri, function(json) {
       if(json.message == "Not Found" || username == '') {
         $('#ghapidata').html("<h2>No User Info Found</h2>");
@@ -32,6 +34,8 @@ $(function(){
         outhtml = outhtml + '<div class="ghcontent"><div class="avi"><a href="'+profileurl+'" target="_blank"><img src="'+aviurl+'" width="80" height="80" alt="'+username+'"></a></div>';
         outhtml = outhtml + '<p>Followers: '+followersnum+' - Following: '+followingnum+'<br>Repos: '+reposnum+'<br>Bio: '+bio+'</p></div>';
         outhtml = outhtml + '<div class="repolist clearfix">'+'<div class="repolists clearfix">';
+        outhtml = emoji.replace_colons(outhtml);
+
         
         var repositories;
         $.getJSON(repouri, function(json){
