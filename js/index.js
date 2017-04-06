@@ -59,7 +59,7 @@ $(function(){
           else {
             outhtml = outhtml + '<p><strong>Starred Repo:</strong></p> <ul>';
             $.each(staredrepo, function(index) {
-              outhtml = outhtml + '<li><a href="'+staredrepo[index].html_url+'" target="_blank">'+staredrepo[index].name +'&nbsp|&nbsp'+staredrepo[index].forks_count+'</a></li>';
+              outhtml = outhtml + '<li><a href="'+staredrepo[index].html_url+'" target="_blank">'+staredrepo[index].name +'&nbsp|&nbsp<i class=\'fa fa-code-fork\'></i>'+staredrepo[index].forks_count+'&nbsp|&nbsp <i class=\'fa fa-star\'></i>'+repositories[index].stargazers_count+'</a></li>';
             });
             outhtml = outhtml + '</ul></div>'; 
           }
