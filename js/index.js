@@ -51,7 +51,7 @@ $(function(){
               outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp<i class=\'fa fa-code-fork\'></i>'+repositories[index].forks_count+'&nbsp|&nbsp <i class=\'fa fa-star\'></i>'+repositories[index].stargazers_count+'</a></li>';
               countstar=countstar+repositories[index].stargazers_count;
             });
-            outhtml = outhtml + '<br><strong>Total Stars:'+countstar+'</ul></div>'; 
+            outhtml = outhtml + '</ul><br><strong>Total Stars:'+countstar+'</div>'; 
           }
           $('#ghapidata').html(outhtml);
         } 
