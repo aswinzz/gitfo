@@ -1,4 +1,4 @@
-
+var countstar=0;
 $(function(){
   $('#ghsubmitbtn').on('click', function(e){
     e.preventDefault();
@@ -42,7 +42,6 @@ $(function(){
           staredrepo = json;   
           outputPageContents();                
         });          
-        var countstar=0;
         function outputPageContent() {
           if(repositories.length == 0) { outhtml = outhtml + '<p>No repos!</p></div>'; }
           else {    
@@ -51,8 +50,9 @@ $(function(){
               outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp<i class=\'fa fa-code-fork\'></i>'+repositories[index].forks_count+'&nbsp|&nbsp <i class=\'fa fa-star\'></i>'+repositories[index].stargazers_count+'</a></li>';
               countstar=countstar+repositories[index].stargazers_count;
             });
-            outhtml = outhtml + '</ul></div><br><strong>Total Stars:'+countstar; 
+            outhtml = outhtml + '</ul></div>'; 
           }
+          outhtml = outhtml + '<br><strong>Total Stars:'+countstar;
           $('#ghapidata').html(outhtml);
         } 
         function outputPageContents() {
