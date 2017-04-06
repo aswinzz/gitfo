@@ -48,7 +48,7 @@ $(function(){
           else {
             outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
             $.each(repositories, function(index) {
-              outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp<i class='fa fa-code-fork'>'+repositories[index].forks_count+'&nbsp|&nbsp <i class='fa fa-star'></i>'+repositories[index].stargazers_count+'</a></li>';
+              outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp<i class=\'fa fa-code-fork\'>'+repositories[index].forks_count+'&nbsp|&nbsp <i class=\'fa fa-star\'></i>'+repositories[index].stargazers_count+'</a></li>';
             });
             outhtml = outhtml + '</ul></div>'; 
           }
