@@ -47,7 +47,7 @@ $(function(){
           else {    
             outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
             $.each(repositories, function(index) {
-              outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp<i class=\'fa fa-code-fork\'></i>'+repositories[index].forks_count+'&nbsp|&nbsp <i class=\'fa fa-star\'></i>'+repositories[index].stargazers_count+'&nbsp|&nbsp <i class=\'fa fa-database\'></i>&nbsp'+repositories[index].language+'</a></li>';
+              outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '&nbsp|&nbsp<i class=\'fa fa-code-fork\'></i>'+repositories[index].forks_count+'&nbsp|&nbsp<i class=\'fa fa-star\'></i>&nbsp'+repositories[index].stargazers_count+'&nbsp|&nbsp <i class=\'fa fa-database\'></i>&nbsp'+repositories[index].language+'</a></li>';
               countstar=countstar+repositories[index].stargazers_count;
             });https://api.github.com/repos/robconery/capistrano-rails-server/languages
             outhtml = outhtml + '</ul></div>'; 
