@@ -279,3 +279,14 @@ a:hover {
  
 html[xmlns] .clearfix { display: block; }
 * html .clearfix { height: 1%; }
+footer {
+  position:fixed;
+    height:50px;
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+}
