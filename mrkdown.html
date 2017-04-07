@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Gitfo-Markdown</title>
+  <link rel="shortcut icon" type="image/png" href="logo.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <link rel="stylesheet" href="css/mrkdown.css">
+
+  
+</head>
+
+<body>
+  <div id="editor">
+  <textarea :value="input" @input="update"></textarea>
+  <div v-html="compiledMarkdown"></div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+<script src='https://unpkg.com/marked@0.3.6'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+
+    <script src="js/mrkdown.js"></script>
+ <footer><a href="index.html">Gitfo</a></footer>
+</body>
+</html>
