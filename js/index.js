@@ -1,5 +1,5 @@
 var countstar=0,java=0,js=0,css=0,php=0,ruby=0,cpp=0,c=0,shell=0,others=0,chash=0,oc=0,r=0,viml=0,go=0,perl=0,cs=0,tex=0,swift=0,scala=0,clojure=0,rust=0,ps=0;
-var lang;
+var lang,total=0;
 $(function(){
   $('#ghsubmitbtn').on('click', function(e){
     e.preventDefault();
@@ -58,53 +58,70 @@ $(function(){
               switch(lang)
                   {
                 case 'JavaScript' : js++;
+                total++;
                                      break;
                 
                 case 'Java' : java++;
+                total++;
                                      break;
                 
                 case 'CSS' : css++;
+                total++;
                                      break;
                 
                 case 'PHP' : php++;
+                total++; 
                                      break;
                  
                 case 'Ruby' : ruby++;
+                total++;
                                      break;
                 
                 case 'C++' : cpp++;
-                                     break;
+                
+                total++;                     break;
                 
                 case 'C' : c++;
+                 total++
                                      break;
                 
                 case 'Shell' : shell++;
+                total++;
                                      break;
                 
                 case 'c#' : chash++;
+                total++;
                                      break;
                 
                 case 'Go' : go++;
+                total++;
                                      break;
                  
                 case 'Perl' : perl++;
+                 total++; 
                                      break;
                           
                 case 'Swift' : swift++;
+                total++;
                                      break;
                  
                 case 'Scala' : scala++;
-                                     break;
+                total++; 
+                                    break;
                 
                 case 'Clojure' : clojure++;
+                total++;
                                      break;
                  
                 case 'Rust' : rust++;
+                total++;        
                                      break;
                 
                 case 'PowerShell' : ps++;
+                total++;        
                                      break;
                   default : others++;
+                  total++;
                             break;
                   }
             });https://api.github.com/repos/robconery/capistrano-rails-server/languages
