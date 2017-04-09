@@ -7,3 +7,5 @@ Like I Made It In Few Hours!!
 ![scr1](https://github.com/aswinzz/gitfo/blob/master/scr1.png?raw=true)
 
 ![scr2](https://github.com/aswinzz/gitfo/blob/master/scr2.png?raw=true)
+
+![scr3](https://github.com/aswinzz/gitfo/blob/master/scr3.png?raw=true)
