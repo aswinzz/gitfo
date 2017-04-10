@@ -3,7 +3,7 @@ var lang,total=0;
 $(function(){
   $('#ghsubmitbtn').on('click', function(e){
     e.preventDefault();
-    $('#ghapidata').html('<div id="loader"><img src="http://i.imgur.com/UqLN6nl.gif" alt="loading..."></div>');
+    $('#ghapidata').html('<div id="loader"><img src="https://i1.wp.com/blog.rapidapi.com/wp-content/uploads/2017/01/octocat.gif" alt="loading..."></div>');
     var username = $('#ghusername').val();
     var requri   = 'https://api.github.com/users/'+username;
     var repouri  = 'https://api.github.com/users/'+username+'/repos';
